@@ -1,0 +1,3 @@
+C:/Users/naima/CLionProjects/algorytmy22.11.2023/cmake-build-debug/CMakeFiles/algorytmy22_11_2023.dir
+C:/Users/naima/CLionProjects/algorytmy22.11.2023/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/naima/CLionProjects/algorytmy22.11.2023/cmake-build-debug/CMakeFiles/rebuild_cache.dir
