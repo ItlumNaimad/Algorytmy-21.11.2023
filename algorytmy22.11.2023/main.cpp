@@ -7,7 +7,7 @@ int main() {
     cout<<"Ilu elementowa ma byc tablica?"<<endl;
     cin>>tab_elements;
     int tablica[tab_elements];
-
+    create_array(tablica, tab_elements);
     do
     {
         cout<<"Wpisz numer zadania by uruchomic program:\n"
@@ -16,12 +16,17 @@ int main() {
         cin>>choice;
         switch(choice)
         {
-            case '1': cout<<"Algorytm babelkowy"<<endl;
+            case '1': cout<<"Algorytm babelkowy "<<endl;
+                bubblesort(tablica, tab_elements);
+                cout<<endl;
                 break;
-            case '2': cout<<"Algorytm Inserion Sor (wstawiania)"<<endl;
+            case '2': cout<<"Algorytm Inserion Sort (wstawiania)"<<endl;
+                insertion_sort(tablica, tab_elements);
+                cout<<endl;
                 break;
             case '3':
                 cout<<"Inicjowanie zamkniecia programu";
+                break;
             default:
                 cout<<"Nie rozpoznano komendy. Sprobuj ponownie";
                 break;

@@ -5,23 +5,23 @@
 #include "algorytmy_sortowania.h"
 #include <ctime>
 #include <cstdlib>
-void bubblesort (int *tab, int size)
+#include <iostream>
+using namespace std;
+void bubblesort (int tab[], int size)
 {
     for (int i=0; i<size-1; i++){
         for (int j=0; j<size-1; j++){
             if (tab[j]>tab[j+1]){
-                swap (tab[j], tab[j+1]);
+                int tmp = tab[j];
+                tab[j] = tab[j+1];
+                tab[j+1] = tmp;
             }
         }
     }
+    for(int i=0; i<size; i++)
+        cout<<"["<<tab[i]<<"]";
 }
-void swap (int value_1, int value_2)
-{
-    int tmp = value_1;
-    value_1=value_2;
-    value_2= tmp;
-}
-void insertion_sort (int *tab, int size)
+void insertion_sort (int tab[], int size)
 {
     int tmp;
     for (int i=1; i<size; i++){
@@ -34,8 +34,10 @@ void insertion_sort (int *tab, int size)
         }
         tab[j+1]=tmp;
     }
+    for(int i=0; i<size; i++)
+        cout<<"["<<tab[i]<<"]";
 }
-void create_array(int *tab, int number)
+void create_array(int tab[], int number)
 {
     srand(time(nullptr));
 
@@ -43,4 +45,6 @@ void create_array(int *tab, int number)
     {
         tab[i]=rand()%1000+1;
     }
+    for(int i=0; i<number; i++)
+        cout<<"["<<tab[i]<<"]";
 }
